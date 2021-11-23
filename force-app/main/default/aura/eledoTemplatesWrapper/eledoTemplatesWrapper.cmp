@@ -1,0 +1,6 @@
+<aura:component
+    implements="force:hasRecordId,lightning:actionOverride"
+    access="global"
+>
+    <c:eledoTemplates recordId="{!v.recordId}"></c:eledoTemplates>
+</aura:component>

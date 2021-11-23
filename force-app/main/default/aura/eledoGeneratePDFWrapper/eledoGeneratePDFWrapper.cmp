@@ -1,0 +1,10 @@
+<aura:component
+    implements="flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName"
+    access="global"
+>
+    <c:eledoGeneratePDF
+        recordId="{!v.recordId}"
+        sObjectName="{!v.sObjectName}"
+        onrecordChange="{!c.refreshView}"
+    />
+</aura:component>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SOQL__c</fullName>
+    <description>Query used to retrieve specific data used for this Eledo Template configuration, when sending data to Eledo PDF Generator.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Query used to retrieve specific data used for this Eledo Template configuration, when sending data to Eledo PDF Generator.</inlineHelpText>
+    <label>SOQL</label>
+    <length>100000</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

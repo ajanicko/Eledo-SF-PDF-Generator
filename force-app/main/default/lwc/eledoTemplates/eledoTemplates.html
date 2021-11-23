@@ -1,0 +1,107 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <div class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+            <div class="slds-modal__header">
+                <h2 class="slds-text-heading--medium">{modalHeader}</h2>
+            </div>
+            <div class="slds-modal__content" style="position: relative">
+                <template if:true={showSpinner}>
+                    <lightning-spinner
+                        alternative-text="Loading"
+                        size="medium"
+                    ></lightning-spinner>
+                </template>
+                <template if:true={nameField}>
+                    <div class="slds-p-around_medium">
+                        <lightning-combobox
+                            name="eledo-templates"
+                            label={nameField.label}
+                            value={templateValue}
+                            placeholder="Select Template"
+                            options={eledoTemplates}
+                            onchange={handleTemplateChange}
+                            class="slds-m-bottom_large"
+                            required="true"
+                            field-level-help={templateIdField.inlineHelpText}
+                        ></lightning-combobox>
+
+                        <div class={objectChoiceWrapperClass}>
+                            <label
+                                class="slds-form-element__label"
+                                for="object-choice"
+                            >
+                                <abbr class="slds-required" title="required"
+                                    >* </abbr
+                                >{objectField.label}</label
+                            >
+                            <lightning-helptext
+                                content={objectField.inlineHelpText}
+                            ></lightning-helptext>
+                            <div class="slds-form-element__control">
+                                <input
+                                    type="text"
+                                    id="object-choice"
+                                    name="object-choice"
+                                    value={objectsValue}
+                                    placeholder="My_Custom_Object__c"
+                                    required=""
+                                    onblur={handleObjectBlur}
+                                    onchange={handleObjectChange}
+                                    class="slds-input object-choice"
+                                />
+                                <datalist id="objects" class="objects">
+                                    <template
+                                        for:each={objects}
+                                        for:item="object"
+                                    >
+                                        <option key={object}>{object}</option>
+                                    </template>
+                                </datalist>
+                            </div>
+                            <div
+                                class={objectChoiceErrorClass}
+                                id="error-message-object-choice"
+                            >
+                                Enter a value from the list.
+                            </div>
+                        </div>
+
+                        <lightning-textarea
+                            name="template-soql"
+                            required
+                            value={soqlValue}
+                            placeholder="SELECT Name, (SELECT Name FROM Opportunities) FROM Account"
+                            label={soqlField.label}
+                            message-when-value-missing="SOQL is required."
+                            onchange={handleSOQLChange}
+                            class="slds-m-bottom_large"
+                            field-level-help={soqlField.inlineHelpText}
+                        ></lightning-textarea>
+                    </div>
+                </template>
+                <div class="slds-modal__footer">
+                    <ul class="slds-button-group-row">
+                        <li class="slds-button-group-item visible">
+                            <lightning-button
+                                variant="neutral"
+                                label="Cancel"
+                                title="Cancel action"
+                                onclick={handleCancelClick}
+                            ></lightning-button>
+                        </li>
+                        <li class="slds-button-group-item visible">
+                            <lightning-button
+                                variant="brand"
+                                label="Save"
+                                title="Save action"
+                                onclick={handleSaveClick}
+                            ></lightning-button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+</template>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Api_Key__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>Eledo API key.</description>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>API key from your Eledo Account, that can be found on Eledo portal.</inlineHelpText>
+    <label>Api Key</label>
+    <length>255</length>
+    <required>true</required>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>
