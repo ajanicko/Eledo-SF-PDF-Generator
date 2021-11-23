@@ -3,6 +3,7 @@ project:
     name: Eledo-SF-PDF-Generator
     package:
         name: Eledo-SF-PDF-Generator
+        namespace: eledo
         api_version: '52.0'
     git:
         default_branch: 'main'
