@@ -1,0 +1,25 @@
+minimum_cumulusci_version: '3.45.0'
+project:
+    name: Eledo-SF-PDF-Generator
+    package:
+        name: Eledo-SF-PDF-Generator
+        api_version: '52.0'
+    git:
+        default_branch: 'main'
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/Eledo-SF-PDF-Generator/tests
+            options:
+                outputdir: robot/Eledo-SF-PDF-Generator/results
+
+    robot_testdoc:
+        options:
+            path: robot/Eledo-SF-PDF-Generator/tests
+            output: robot/Eledo-SF-PDF-Generator/doc/Eledo-SF-PDF-Generator_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
