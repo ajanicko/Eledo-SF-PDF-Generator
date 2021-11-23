@@ -19,12 +19,13 @@ public class EledoTestDataFactory {
         return templates;
     }
 
-    public static void createEledoConnectionSettings() {
-        Eledo_Connection_Setting__mdt setting = new Eledo_Connection_Setting__mdt();
-        setting.MasterLabel = 'testLabel';
-        setting.DeveloperName = 'testName';
-        setting.Api_Key__c = 'testKey';
-        setting.Endpoint__c = 'testEndpoint';
+    public static Eledo_Connection_Setting__mdt createEledoConnectionSettings() {
+        return new Eledo_Connection_Setting__mdt(
+            MasterLabel = 'testLabel',
+            DeveloperName = 'testName',
+            Api_Key__c = 'testKey',
+            Endpoint__c = 'testEndpoint'
+        );
     }
 
     public static Account createAccount() {

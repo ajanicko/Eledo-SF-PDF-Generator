@@ -1,8 +1,13 @@
 public with sharing class EledoAPI {
+    @TestVisible
+    private static Eledo_Connection_Setting__mdt testSetting;
+
     private static Eledo_Connection_Setting__mdt getEndpoint() {
-        List<Eledo_Connection_Setting__mdt> settings = Eledo_Connection_Setting__mdt.getAll()
-            .values();
-        return settings[0];
+        if (Test.isRunningTest()) {
+            return testSetting;
+        } else {
+            return Eledo_Connection_Setting__mdt.getAll().values()[0];
+        }
     }
 
     private static Eledo_Template__c getTemplate(String templateName) {

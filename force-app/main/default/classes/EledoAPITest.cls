@@ -8,7 +8,7 @@ private class EledoAPITest {
             numTemplates,
             sObjName
         );
-        EledoTestDataFactory.createEledoConnectionSettings();
+        EledoAPI.testSetting = EledoTestDataFactory.createEledoConnectionSettings();
         Account testAcc = EledoTestDataFactory.createAccount();
         Test.setMock(
             HttpCalloutMock.class,
@@ -56,7 +56,7 @@ private class EledoAPITest {
             numTemplates,
             sObjName
         );
-        EledoTestDataFactory.createEledoConnectionSettings();
+        EledoAPI.testSetting = EledoTestDataFactory.createEledoConnectionSettings();
         Account testAcc = EledoTestDataFactory.createAccount();
         Test.setMock(
             HttpCalloutMock.class,
@@ -80,7 +80,7 @@ private class EledoAPITest {
 
     @isTest
     static void testGetTemplates() {
-        EledoTestDataFactory.createEledoConnectionSettings();
+        EledoAPI.testSetting = EledoTestDataFactory.createEledoConnectionSettings();
         Test.setMock(
             HttpCalloutMock.class,
             new EledoTestDataFactory.EledoCalloutSuccessMock()
@@ -105,7 +105,7 @@ private class EledoAPITest {
 
     @isTest
     static void testGetTemplatesCatchAuraHandledExceptionResponseNot200() {
-        EledoTestDataFactory.createEledoConnectionSettings();
+        EledoAPI.testSetting = EledoTestDataFactory.createEledoConnectionSettings();
         Test.setMock(
             HttpCalloutMock.class,
             new EledoTestDataFactory.EledoCalloutFailureMock()
