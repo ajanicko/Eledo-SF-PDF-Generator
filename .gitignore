@@ -21,3 +21,5 @@ robot/Eledo-SF-PDF-Generator/results/
 
 # Misc
 .DS_Store
+test_results.json
+test_results.xml
