@@ -1,7 +1,10 @@
 # Eledo-SF-PDF-Generator
+Lightweight SF managed package for Salesforce users wishing to access Eledo(https://eledo.online/) webservice to generate PDF documents.
 
-Add a brief description of this project here, in Markdown format.
-It will be shown on the main page of the project's GitHub repository.
+Managed packaged developed to:
+1. Showcase my skills.
+2. Get some managed package and CumulusCI experience.
+3. Maybe sell one day.
 
 ## Development
 
