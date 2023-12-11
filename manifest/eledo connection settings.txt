@@ -1,0 +1,8 @@
+Label	Eledo 1	Protected Component	Not Checked
+Eledo Connection Setting Name	Eledo_1	Namespace Prefix	eledo
+Api Key	qvn4hrfrcm48_3w32z8qrg4c33dogugle9ehj	 	 
+Endpoint	https://eledo.online/api/RESTv1/	 	 
+Created By	Adam Janicko, 25/10/2021, 14:01	Last Modified By	Adam Janicko, 25/10/2021, 14:01
+
+GITHUB TOKEN
+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
